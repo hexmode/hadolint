@@ -1,13 +1,8 @@
 ---
-- id: hadolint-docker
-  name: Lint Dockerfiles
-  description: Runs hadolint Docker image to lint Dockerfiles
-  language: docker_image
-  types: ["dockerfile"]
-  entry: ghcr.io/hadolint/hadolint hadolint
-- id: hadolint
-  name: Lint Dockerfiles
-  description: Runs hadolint to lint Dockerfiles
-  language: system
-  types: ["dockerfile"]
-  entry: hadolint
+-   id: hadolint
+    name: hadolint
+    description: "A smarter Dockerfile linter that helps you build best practice Docker images"
+    entry: hadolint
+    language: python
+    types: [dockerfile]
+    require_serial: true
